@@ -121,8 +121,8 @@
 
 @media screen and (max-width: 480px) {
     .navigation-bar {
-        position: absolute;
-        bottom: 0;
+        position: fixed;
+        bottom: 1rem;
         flex-direction: row;
         width: 90vw;
         justify-content: center;
