@@ -13,12 +13,11 @@
 }
 
 .landing-page-header-container {
-    background-image: linear-gradient(
+    background-image: /*linear-gradient(
             to top,
             rgba(0, 0, 0, 0.74),
             rgba(84, 84, 84, 0) 300px
-        ),
-        url("../images/bg-mobile 1.jpg");
+        ),*/ url("../images/bg-mobile 1.jpg");
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -122,10 +121,17 @@
 @media screen and (max-width: 480px) {
     .navigation-bar {
         position: fixed;
-        bottom: 1rem;
+        bottom: 0;
+        padding-bottom: 1rem;
         flex-direction: row;
-        width: 90vw;
+        width: 100%;
+        height: 7rem;
         justify-content: center;
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.74),
+            rgba(84, 84, 84, 0)
+        );
     }
 }
 
