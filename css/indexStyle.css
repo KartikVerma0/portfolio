@@ -45,6 +45,12 @@ header.landing-banner {
     font-family: "Ruthligos", cursive;
 }
 
+@media screen and (max-width: 768px) {
+    .landing-banner h1 {
+        padding-left: 1rem;
+    }
+}
+
 .navigation-bar {
     background: rgba(85, 0, 0, 0.8);
     backdrop-filter: blur(10px);
