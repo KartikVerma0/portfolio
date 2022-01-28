@@ -23,7 +23,7 @@
             to top,
             rgba(0, 0, 0, 0.74),
             rgba(84, 84, 84, 0) 300px
-        ),*/ url("../images/bg-mobile.jpg");
+        ),*/ url("../images/bg-mobile 1.jpg");
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -40,7 +40,7 @@
                 rgba(0, 0, 0, 0.74),
                 rgba(84, 84, 84, 0) 300px
             ),
-            url("../images/bg-comp.jpg");
+            url("../images/bg-comp 1.jpg");
         background-size: cover;
         justify-content: space-between;
     }
