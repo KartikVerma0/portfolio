@@ -1,16 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
-
-@media screen and (max-width: 480px) {
-    :root {
-        font-size: 12px;
-    }
+@font-face {
+    font-family: "Ruthligos";
+    src: url("../fonts/Ruthligos.ttf");
 }
 
-@media screen and (max-width: 926px) {
-    :root {
-        font-size: 14px;
-    }
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 
 * {
     margin: 0;
@@ -18,169 +11,114 @@
     box-sizing: border-box;
 }
 
-.landing-page-header-container {
-    background-image: /*linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.74),
-            rgba(84, 84, 84, 0) 300px
-        ),*/ url("../images/bg-mobile 1.jpg");
-    background-size: cover;
+:root {
+    --clr-neutral-900: rgba(43, 0, 0, 1);
+    --clr-neutral-100: rgba(253, 227, 167, 1);
+    --clr-neutral-200: rgba(255, 164, 94, 1);
+    --clr-neutral-800: rgba(116, 2, 2, 1);
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: var(--clr-neutral-200);
+}
+
+header.landing-banner {
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url("../images/landing-banner.jpg") center/cover no-repeat;
+    width: auto;
     height: 100vh;
-    width: 100%;
-    position: relative;
+    background-attachment: fixed;
+
     display: flex;
-    padding-block: 20vh;
-    padding-inline: 10vh;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (min-width: 480px) {
-    .landing-page-header-container {
-        background-image: linear-gradient(
-                to left,
-                rgba(0, 0, 0, 0.74),
-                rgba(84, 84, 84, 0) 300px
-            ),
-            url("../images/bg-comp 1.jpg");
-        background-size: cover;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .landing-page-header-container {
-        flex-direction: column;
-        padding-block: 10vh;
-        align-items: center;
-    }
-}
-
-.main-intro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.main-intro-container > h1 {
-    font-size: 5.5rem;
-    font-family: "poppins", sans-serif;
-    font-weight: 900;
-    color: white;
-    line-height: 1;
-}
-
-.main-intro-container > h2 {
-    font-size: 2.35rem;
-    font-family: "poppins", sans-serif;
-    font-weight: 700;
-    color: #ff8761;
-}
-
-@media screen and (max-width: 480px) {
-    .main-intro-container {
-        align-items: center;
-    }
-
-    .main-intro-container > h1 {
-        text-align: center;
-    }
-
-    .main-intro-container > h2 {
-        width: 15rem;
-        text-align: center;
-    }
-}
-
-.main-intro-container > button {
-    border: 2px solid #ff8761;
-    background-color: transparent;
-    padding-block: 0.5rem;
-    padding-inline: 1rem;
-    border-radius: 10rem;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: "poppins", sans-serif;
-    cursor: pointer;
-}
-
-.main-intro-container > button:hover {
-    background-color: #ff8761;
-}
-
-.social-icons-container {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.social-icons-container img {
-    width: 2.5rem;
+.landing-banner h1 {
+    font-size: clamp(7rem, 20vw, 15rem);
+    color: var(--clr-neutral-200);
+    font-family: "ruthligos", cursive;
 }
 
 .navigation-bar {
+    background: rgba(85, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    /* width: 100%;
+    position: sticky;
+    top: 0; */
+}
+
+.navigation-bar ul {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
+    gap: clamp(1rem, 5vw, 4rem);
+    list-style: none;
+    justify-content: center;
+
+    /* position: sticky;
+    top: 0; */
+    margin-bottom: 0;
+    padding: 0;
 }
 
-@media screen and (max-width: 480px) {
-    .navigation-bar {
-        position: fixed;
-        bottom: 0;
-        padding-bottom: 1rem;
-        flex-direction: row;
-        width: 100%;
-        height: 7rem;
-        justify-content: center;
-        background-image: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.74),
-            rgba(84, 84, 84, 0)
-        );
-    }
-}
-
-.navigation-bar > img {
-    width: 2.5vw;
-    height: auto;
-    padding-bottom: 2rem;
-}
-
-@media screen and (max-width: 480px) {
-    .navigation-bar > img {
-        display: none;
-    }
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav-links > a {
-    text-align: right;
-    color: white;
+.navigation-bar ul li a {
     text-decoration: none;
-    font-family: "poppins", sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 5rem);
+    color: var(--clr-neutral-100);
+    font-weight: 600;
+    transition: color 0.2s;
 }
 
-@media screen and (max-width: 480px) {
-    .nav-links {
-        flex-direction: row;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
+/* @media screen and (max-width: 768px) {
+    .navigation-bar ul li a {
+        font-size: 1.5rem;
     }
-    .nav-links > a {
-        font-size: 1.9rem;
-        font-weight: 500;
-        line-height: 1;
-    }
+} */
+
+.navigation-bar ul li a:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--clr-neutral-100);
 }
 
-.landing-page-header-container > .navigation-bar > .nav-links > .active {
-    color: #ff8761;
+.my-description {
+    /* display: flex; */
+    margin-top: clamp(4rem, 5vw, 5rem);
+    padding: 4rem;
+}
+
+/* .my-description > * {
+    flex: 1;
+} */
+
+.my-description section {
+    padding-top: clamp(4rem, 6vw, 6rem);
+}
+
+.my-description h2 {
+    font-size: clamp(4rem, 6vw, 6rem);
+    font-weight: 700;
+    color: var(--clr-neutral-900);
+}
+
+.my-description p {
+    /* text-align: justify; */
+    color: var(--clr-neutral-800);
+    font-size: clamp(1.7rem, 2.75vw, 4.5rem);
+}
+
+.my-description img {
+    border-radius: 50%;
+    width: 90%;
+    aspect-ratio: 1;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
