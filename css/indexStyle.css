@@ -42,7 +42,7 @@ header.landing-banner {
 .landing-banner h1 {
     font-size: clamp(7rem, 20vw, 15rem);
     color: var(--clr-neutral-200);
-    font-family: "ruthligos", cursive;
+    font-family: "Ruthligos", cursive;
 }
 
 .navigation-bar {
