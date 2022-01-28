@@ -47,7 +47,7 @@ header.landing-banner {
 
 @media screen and (max-width: 768px) {
     .landing-banner h1 {
-        padding-left: 1rem;
+        margin-left: 1rem;
     }
 }
 
