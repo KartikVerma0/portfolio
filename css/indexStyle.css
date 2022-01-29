@@ -99,10 +99,12 @@ body {
     color: var(--clr-neutral-200);
     font-family: "Ruthligos", cursive;
     font-weight: 100;
+    opacity: 0;
 
-    animation: fadeInAnimation ease 5s;
+    animation: fadeInAnimation ease-out 4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 @media screen and (max-width: 768px) {
