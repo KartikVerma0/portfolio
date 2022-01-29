@@ -88,7 +88,7 @@ body {
         background: linear-gradient(
                 to right,
                 rgba(0, 0, 0, 0.85),
-                rgba(0, 0, 0, 0.9)
+                rgba(0, 0, 0, 0.85)
             ),
             url("../images/landing-banner mob.jpg") center/cover no-repeat;
     }
