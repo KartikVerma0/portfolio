@@ -104,7 +104,7 @@ body {
     animation: fadeInAnimation ease-out 4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 
 @media screen and (max-width: 768px) {
