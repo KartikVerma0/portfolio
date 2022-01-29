@@ -83,6 +83,17 @@ body {
         url("../images/landing-banner.jpg") center/cover no-repeat;
 }
 
+@media screen and (max-width: 576px) {
+    #group-1 > .base_layer {
+        background: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.85),
+                rgba(0, 0, 0, 0.9)
+            ),
+            url("../images/landing-banner mob.jpg") center/cover no-repeat;
+    }
+}
+
 .mid_layer > h1 {
     font-size: clamp(7rem, 20vw, 15rem);
     color: var(--clr-neutral-200);
