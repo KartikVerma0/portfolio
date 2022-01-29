@@ -10,6 +10,15 @@
     padding: 0;
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 :root {
     --clr-neutral-900: rgba(43, 0, 0, 1);
     --clr-neutral-100: rgba(253, 227, 167, 1);
@@ -79,6 +88,10 @@ body {
     color: var(--clr-neutral-200);
     font-family: "Ruthligos", cursive;
     font-weight: 100;
+
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 768px) {
