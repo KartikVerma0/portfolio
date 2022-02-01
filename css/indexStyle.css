@@ -213,6 +213,12 @@ body {
     color: var(--clr-neutral-100);
     font-size: 300;
     font-size: 1.5rem;
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.my-description button:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0.3rem 0.3rem 0 var(--clr-neutral-100);
 }
 
 .image-container {
