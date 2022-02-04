@@ -20,15 +20,16 @@
 }
 
 :root {
-    --clr-neutral-900: rgba(43, 0, 0, 1);
-    --clr-neutral-100: rgba(253, 227, 167, 1);
-    --clr-neutral-200: rgba(255, 164, 94, 1);
-    --clr-neutral-800: rgba(116, 2, 2, 1);
+    --clr-neutral-100: rgba(255, 255, 255, 1);
+    --clr-neutral-200: rgba(231, 148, 213, 1);
+    --clr-neutral-300: rgba(186, 34, 156, 1);
+    --clr-neutral-400: rgba(54, 12, 45, 1);
+    --clr-neutral-500: rgba(23, 8, 20, 1);
 }
 
 body {
     font-family: "poppins", sans-serif;
-    background-color: var(--clr-neutral-200);
+    background-color: var(--clr-neutral-500);
 }
 
 .parallax_wrapper {
@@ -81,6 +82,7 @@ body {
             rgba(0, 0, 0, 0.8)
         ),
         url("../images/landing-banner.jpg") center/cover no-repeat;
+    filter: blur(1.5px);
 }
 
 @media screen and (max-width: 576px) {
@@ -96,7 +98,7 @@ body {
 
 .mid_layer > h1 {
     font-size: clamp(5.5rem, 16vw, 15rem);
-    color: var(--clr-neutral-200);
+    color: var(--clr-neutral-100);
     font-family: "Ruthligos", cursive;
     font-weight: 100;
     opacity: 0;
@@ -115,12 +117,13 @@ body {
 }
 
 .navigation-bar {
-    background: rgba(85, 0, 0, 0.8);
+    background: rgba(177, 26, 147, 0.2);
     backdrop-filter: blur(10px);
     padding: 1rem;
-    /* width: 100%;
+    /* width: 100%; */
     position: sticky;
-    top: 0; */
+    top: 0;
+    z-index: 1;
 }
 
 .navigation-bar ul {
@@ -138,21 +141,21 @@ body {
 .navigation-bar ul li a {
     text-decoration: none;
     font-size: clamp(1.5rem, 3vw, 5rem);
-    color: var(--clr-neutral-100);
+    color: var(--clr-neutral-200);
     font-weight: 600;
     transition: color 0.2s;
 }
 
 .navigation-bar ul li a:hover {
     color: transparent;
-    -webkit-text-stroke: 1px var(--clr-neutral-100);
+    -webkit-text-stroke: 1px var(--clr-neutral-200);
 }
 
 .my-description {
     /* display: flex; */
     margin-top: clamp(2rem, 3.5vw, 4rem);
     padding: 5rem;
-    background-color: var(--clr-neutral-200);
+    background-color: var(--clr-neutral-500);
     transform: scale(1.2);
 }
 
@@ -175,7 +178,7 @@ body {
 .my-description h2 {
     font-size: clamp(4rem, 5vw, 6rem);
     font-weight: 900;
-    color: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
     margin-bottom: 0;
 }
 
@@ -186,7 +189,7 @@ body {
 }
 
 .my-description p {
-    color: var(--clr-neutral-800);
+    color: rgba(255, 255, 255, 0.7);
     font-size: clamp(1.35rem, 1.75vw, 4.5rem);
     font-weight: 300;
 }
@@ -207,10 +210,10 @@ body {
 .my-description button {
     width: 12rem;
     height: 3rem;
-    background: #740202;
+    background: var(--clr-neutral-300);
     border-radius: 50px;
     border: none;
-    color: var(--clr-neutral-100);
+    color: var(--clr-neutral-500);
     font-weight: 300;
     font-size: 1.5rem;
     transition: transform 200ms ease-out, box-shadow 200ms ease-out;
@@ -218,7 +221,7 @@ body {
 
 .my-description button:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0.3rem 0.3rem 0 var(--clr-neutral-100);
+    box-shadow: 0.3rem 0.3rem 0 var(--clr-neutral-200);
 }
 
 .image-container {
