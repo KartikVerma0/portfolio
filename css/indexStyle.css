@@ -37,7 +37,6 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 300px;
-    overscroll-behavior-y: contain;
 }
 
 .parallax_group {
@@ -218,6 +217,7 @@ body {
     font-weight: 300;
     font-size: 1.5rem;
     transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+    margin-top: 1rem;
 }
 
 .my-description button:hover {
