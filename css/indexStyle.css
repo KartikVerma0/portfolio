@@ -37,6 +37,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 300px;
+    overscroll-behavior-y: contain;
 }
 
 .parallax_group {
