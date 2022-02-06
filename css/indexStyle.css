@@ -176,8 +176,9 @@ body {
 }
 
 .my-description h2 {
-    font-size: clamp(4rem, 5vw, 6rem);
-    font-weight: 900;
+    font-size: clamp(4rem, 5.9vw, 6rem);
+    font-family: "Rozha One";
+    /* font-weight: 700; */
     color: var(--clr-neutral-100);
     margin-bottom: 0;
 }
