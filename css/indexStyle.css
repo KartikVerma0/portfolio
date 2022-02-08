@@ -30,63 +30,23 @@
 body {
     font-family: "poppins", sans-serif;
     background-color: var(--clr-neutral-500);
-}
-
-.parallax_wrapper {
-    height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 300px;
 }
 
-.parallax_group {
-    position: relative;
+.hero {
     height: 100vh;
-    transform-style: preserve-3d;
-}
-
-.outro_screen {
-    height: 0;
-    background-color: var(--clr-neutral-200);
-}
-
-.parallax_layer {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.base_layer {
-    /* scale calc->  1+((z transform valur * -1)/ perspective) */
-    transform: translateZ(-300px) scale(2.1);
-}
-
-.mid_layer {
-    transform: translateZ(0);
-}
-
-#outro {
-    z-index: 0;
-}
-
-#group-1 {
-    z-index: -1;
-}
-
-#group-1 > .base_layer {
+    width: 100%;
+    overflow: hidden;
     background: linear-gradient(
             to right,
             rgba(0, 0, 0, 0.8),
             rgba(0, 0, 0, 0.8)
         ),
         url("../images/landing-banner.jpg") center/cover no-repeat;
-    filter: blur(1.5px);
 }
 
 @media screen and (max-width: 576px) {
-    #group-1 > .base_layer {
+    .hero {
         background: linear-gradient(
                 to right,
                 rgba(0, 0, 0, 0.85),
@@ -96,7 +56,7 @@ body {
     }
 }
 
-.mid_layer > h1 {
+.hero-heading {
     font-size: clamp(5.5rem, 16vw, 15rem);
     color: var(--clr-neutral-100);
     font-family: "Ruthligos", cursive;
@@ -110,6 +70,23 @@ body {
     padding-left: 5.5rem;
 }
 
+.blurredbg {
+    backdrop-filter: blur(1.5px);
+}
+
+.w-100 {
+    width: 100vw;
+}
+
+.h-100 {
+    height: 100vh;
+}
+
+.outro_screen {
+    height: 0;
+    background-color: var(--clr-neutral-200);
+}
+
 @media screen and (max-width: 768px) {
     .mid_layer > h1 {
         padding-left: 2rem;
@@ -120,10 +97,14 @@ body {
     background: rgba(177, 26, 147, 0.2);
     backdrop-filter: blur(10px);
     padding: 1rem;
-    /* width: 100%; */
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1;
+}
+
+.navigation-bar:hover {
+    background: rgba(177, 26, 147, 0.5);
 }
 
 .navigation-bar ul {
@@ -153,30 +134,17 @@ body {
 
 .my-description {
     /* display: flex; */
-    margin-top: clamp(2rem, 3.5vw, 4rem);
-    padding: 5rem;
+    margin-top: clamp(2.4rem, 4.2vw, 4.8rem);
+    margin-bottom: 6rem;
     background-color: var(--clr-neutral-500);
-    transform: scale(1.2);
-}
-
-@media screen and (max-width: 728px) {
-    .my-description {
-        transform: scale(1.155);
-    }
-}
-
-@media screen and (max-width: 565px) {
-    .my-description {
-        transform: scale(1.155);
-    }
 }
 
 .my-description section {
-    padding-top: clamp(4rem, 6vw, 6rem);
+    padding-top: clamp(4.8rem, 7.2vw, 7.2rem);
 }
 
 .my-description h2 {
-    font-size: clamp(4rem, 5.9vw, 6rem);
+    font-size: clamp(4.7rem, 8vw, 7.2rem);
     font-family: "Rozha One";
     /* font-weight: 700; */
     color: var(--clr-neutral-100);
@@ -191,7 +159,7 @@ body {
 
 .my-description p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: clamp(1.35rem, 1.75vw, 4.5rem);
+    font-size: clamp(1.62rem, 2vw, 5.4rem);
     font-weight: 300;
 }
 
@@ -203,27 +171,27 @@ body {
 
 .my-description img {
     border-radius: 2rem;
-    width: 85%;
+    width: 75%;
     height: auto;
     object-fit: cover;
 }
 
 .my-description button {
-    width: 12rem;
-    height: 3rem;
+    width: 14.4rem;
+    height: 3.6rem;
     background: var(--clr-neutral-300);
     border-radius: 50px;
     border: none;
     color: var(--clr-neutral-500);
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     transition: transform 200ms ease-out, box-shadow 200ms ease-out;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 .my-description button:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0.3rem 0.3rem 0 var(--clr-neutral-200);
+    transform: translateY(-0.36rem);
+    box-shadow: 0.36rem 0.36rem 0 var(--clr-neutral-200);
 }
 
 .image-container {
