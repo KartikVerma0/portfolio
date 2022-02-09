@@ -15,20 +15,26 @@ const tl1 = gsap
         ease: "easeIn",
         opacity: 1,
     })
-    .to(".my-description p", {
-        duration: 1,
-        x: 0,
-        ease: "easeIn",
-        opacity: 1,
-        delay: -1,
-    })
-    .to(".my-description button", {
-        duration: 0.8,
-        x: 0,
-        ease: "easeIn",
-        opacity: 1,
-        delay: -1,
-    });
+    .to(
+        ".my-description p",
+        {
+            duration: 1,
+            x: 0,
+            ease: "easeIn",
+            opacity: 1,
+        },
+        "<"
+    )
+    .to(
+        ".my-description button",
+        {
+            duration: 0.8,
+            x: 0,
+            ease: "easeIn",
+            opacity: 1,
+        },
+        "<"
+    );
 
 for (let i = 1; i < 3; i++) {
     tl1.to(".my-description button", {
