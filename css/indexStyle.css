@@ -122,7 +122,7 @@ body {
 
 .my-description {
     /* display: flex; */
-    margin-top: clamp(2.4rem, 4.2vw, 4.8rem);
+    margin-top: clamp(2rem, 4vw, 4.8rem);
     margin-bottom: 6rem;
     background-color: var(--clr-neutral-500);
 }
@@ -132,16 +132,17 @@ body {
 }
 
 .my-description h2 {
-    font-size: clamp(4.7rem, 8vw, 7.2rem);
+    font-size: clamp(4.7rem, 7.9vw, 7.2rem);
     font-family: "Rozha One";
     /* font-weight: 700; */
     color: var(--clr-neutral-100);
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     opacity: 0;
     transform: translateX(-160%);
+    line-height: 0.8;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .my-description h2 {
         text-align: center;
     }
@@ -149,15 +150,17 @@ body {
 
 .my-description p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: clamp(1.62rem, 2vw, 5.4rem);
+    font-size: clamp(1.35rem, 1.6vw, 5.4rem);
+
     font-weight: 300;
     opacity: 0;
     transform: translateX(-180%);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .my-description p {
         text-align: center;
+        padding-inline: 5.5rem;
     }
 }
 
@@ -197,7 +200,7 @@ body {
     overflow-x: hidden;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .center-on-small-screen {
         display: flex;
         flex-direction: column;
