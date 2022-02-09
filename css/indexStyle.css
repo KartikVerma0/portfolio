@@ -30,7 +30,8 @@
 body {
     font-family: "poppins", sans-serif;
     background-color: var(--clr-neutral-500);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    /* width: 100vw; */
 }
 
 .hero {
@@ -193,6 +194,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 576px) {
