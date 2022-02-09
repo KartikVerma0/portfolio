@@ -136,6 +136,8 @@ body {
     /* font-weight: 700; */
     color: var(--clr-neutral-100);
     margin-bottom: 0;
+    opacity: 0;
+    transform: translateX(-700px);
 }
 
 @media screen and (max-width: 576px) {
@@ -148,6 +150,8 @@ body {
     color: rgba(255, 255, 255, 0.7);
     font-size: clamp(1.62rem, 2vw, 5.4rem);
     font-weight: 300;
+    opacity: 0;
+    transform: translateX(-700px);
 }
 
 @media screen and (max-width: 576px) {
@@ -161,6 +165,8 @@ body {
     width: 75%;
     height: auto;
     object-fit: cover;
+    transform: translateX(700px);
+    opacity: 0;
 }
 
 .my-description button {
@@ -174,6 +180,8 @@ body {
     font-size: 1.8rem;
     transition: transform 200ms ease-out, box-shadow 200ms ease-out;
     margin-top: 1.2rem;
+    opacity: 0;
+    transform: translateX(-700px);
 }
 
 .my-description button:hover {

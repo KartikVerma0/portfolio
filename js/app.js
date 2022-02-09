@@ -9,24 +9,24 @@ const tl1 = gsap
             // markers: true,
         },
     })
-    .from(".introHeading", {
+    .to(".introHeading", {
         duration: 1,
-        x: -700,
+        x: 0,
         ease: "easeIn",
-        opacity: 0,
+        opacity: 1,
     })
-    .from(".my-description p", {
+    .to(".my-description p", {
         duration: 1,
-        x: -700,
+        x: 0,
         ease: "easeIn",
-        opacity: 0,
+        opacity: 1,
         delay: -1,
     })
-    .from(".my-description button", {
+    .to(".my-description button", {
         duration: 0.8,
-        x: -700,
+        x: 0,
         ease: "easeIn",
-        opacity: 0,
+        opacity: 1,
         delay: -1,
     });
 
@@ -48,10 +48,10 @@ const tl2 = gsap
             // markers: true,
         },
     })
-    .from(".my-description img", {
+    .to(".my-description img", {
         duration: 1,
-        x: 700,
+        x: 0,
         ease: "easeIn",
-        opacity: 0,
+        opacity: 1,
         delay: -1,
     });
