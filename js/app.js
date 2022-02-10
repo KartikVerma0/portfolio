@@ -60,4 +60,34 @@ const tl2 = gsap
         ease: "easeIn",
         opacity: 1,
         delay: -1,
-    });
+    })
+    .to(
+        ".waves-divider",
+        {
+            y: 0,
+            duration: 2,
+        },
+        "<"
+    );
+
+const randomY = () => {
+    return Math.floor(Math.random() * 20) + 1;
+};
+
+const randomDuration = () => {
+    return Math.floor(Math.random() * 4) + 1;
+};
+
+for (let i = 1; i < 6; i++) {
+    gsap.timeline({ repeat: -1, yoyo: true })
+        .to(`#path${i}`, {
+            y: randomY(),
+            duration: randomDuration(),
+            ease: "power2.inOut",
+        })
+        .to(`#path${i}`, {
+            y: 0,
+            duration: randomDuration(),
+            ease: "power2.inOut",
+        });
+}
