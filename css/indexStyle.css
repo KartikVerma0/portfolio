@@ -10,15 +10,6 @@
     padding: 0;
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 :root {
     --clr-neutral-100: rgba(255, 255, 255, 1);
     --clr-neutral-200: rgba(231, 148, 213, 1);
@@ -63,11 +54,10 @@ body {
     font-family: "Ruthligos", cursive;
     font-weight: 100;
     opacity: 0;
-
-    animation: fadeInAnimation ease-out 4s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+    /* animation: fadeInAnimation ease-out 4s; */
+    /* animation-iteration-count: 1; */
+    /* animation-fill-mode: forwards; */
+    /* animation-delay: 1.5s; */
     padding-left: 5.5rem;
 }
 
