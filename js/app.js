@@ -1,5 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-// gsap.registerPlugin(MotionPathPlugin, ScrollToPlugin, TextPlugin);
 
 const tl1 = gsap
     .timeline({
@@ -91,3 +90,14 @@ for (let i = 1; i < 6; i++) {
             ease: "power2.inOut",
         });
 }
+
+const heroInit = () => {
+    gsap.to(document.querySelector(".hero-heading"), {
+        opacity: 1,
+        ease: "power1.Out",
+        duration: 4,
+        delay: 1.5,
+    });
+};
+
+window.addEventListener("load", heroInit);
