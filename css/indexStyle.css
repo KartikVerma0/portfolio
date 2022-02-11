@@ -166,6 +166,7 @@ body {
     object-fit: cover;
     transform: translateX(160%);
     opacity: 0;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 .my-description button {
