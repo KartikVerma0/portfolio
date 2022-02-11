@@ -96,8 +96,21 @@ const heroInit = () => {
         opacity: 1,
         ease: "power1.Out",
         duration: 4,
-        delay: 1.5,
+        delay: 1,
     });
 };
+
+gsap.to(".portfolioHeading", {
+    duration: 1,
+    x: 0,
+    ease: "back",
+    opacity: 1,
+    scrollTrigger: ".portfolioHeading",
+});
+gsap.to(".portfolioItems", {
+    duration: 1.5,
+    opacity: 1,
+    scrollTrigger: ".portfolioItems",
+});
 
 window.addEventListener("load", heroInit);
