@@ -169,6 +169,16 @@ const contactTimeline = gsap
             clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
         },
         "<"
+    )
+    .to(
+        ".social-media-circle a",
+        {
+            rotate: "-360",
+            repeat: -1,
+            ease: "linear",
+            duration: 10,
+        },
+        "<"
     );
 
 const contactForm = document.querySelector(".contactForm");
