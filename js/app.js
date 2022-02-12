@@ -7,30 +7,14 @@ const tl1 = gsap
             toggleActions: "play pause pause pause",
             // markers: true,
         },
+        defaults: { duration: 1, x: 0, ease: "easeIn", opacity: 1 },
     })
-    .to(".introHeading", {
-        duration: 1,
-        x: 0,
-        ease: "easeIn",
-        opacity: 1,
-    })
-    .to(
-        ".my-description p",
-        {
-            duration: 1,
-            x: 0,
-            ease: "easeIn",
-            opacity: 1,
-        },
-        "<"
-    )
+    .to(".introHeading", {})
+    .to(".my-description p", {}, "<")
     .to(
         ".my-description button",
         {
             duration: 0.8,
-            x: 0,
-            ease: "easeIn",
-            opacity: 1,
         },
         "<"
     );
@@ -45,14 +29,13 @@ for (let i = 1; i < 3; i++) {
     });
 }
 
-const tl2 = gsap
-    .timeline({
-        scrollTrigger: {
-            trigger: ".my-description img",
-            toggleActions: "play pause pause pause",
-            // markers: true,
-        },
-    })
+gsap.timeline({
+    scrollTrigger: {
+        trigger: ".my-description img",
+        toggleActions: "play pause pause pause",
+        // markers: true,
+    },
+})
     .to(".my-description img", {
         duration: 1,
         x: 0,
@@ -77,18 +60,22 @@ const randomDuration = () => {
     return Math.floor(Math.random() * 4) + 1;
 };
 
-for (let i = 1; i < 6; i++) {
-    gsap.timeline({ repeat: -1, yoyo: true })
-        .to(`#wave${i}`, {
-            y: randomY(),
-            duration: randomDuration(),
-            ease: "power2.inOut",
-        })
-        .to(`#wave${i}`, {
-            y: 0,
-            duration: randomDuration(),
-            ease: "power2.inOut",
-        });
+const dividers = ["wave", "peak", "step"];
+
+for (let divider of dividers) {
+    for (let i = 1; i < 6; i++) {
+        gsap.timeline({ repeat: -1, yoyo: true })
+            .to(`#${divider}${i}`, {
+                y: randomY(),
+                duration: randomDuration(),
+                ease: "power2.inOut",
+            })
+            .to(`#${divider}${i}`, {
+                y: 0,
+                duration: randomDuration(),
+                ease: "power2.inOut",
+            });
+    }
 }
 
 const heroInit = () => {
@@ -100,9 +87,10 @@ const heroInit = () => {
     });
 };
 
-gsap.timeline({ scrollTrigger: ".portfolioHeading" })
+window.addEventListener("load", heroInit);
+
+gsap.timeline({ scrollTrigger: ".portfolioHeading", defaults: { duration: 1 } })
     .to(".portfolioHeading", {
-        duration: 1,
         x: 0,
         ease: "back",
         opacity: 1,
@@ -119,45 +107,29 @@ gsap.timeline({ scrollTrigger: ".portfolioHeading" })
         ".peak-divider",
         {
             y: 0,
-            duration: 1,
         },
         "<"
     );
 
-window.addEventListener("load", heroInit);
-
-for (let i = 1; i < 6; i++) {
-    gsap.timeline({ repeat: -1, yoyo: true })
-        .to(`#peak${i}`, {
-            y: randomY(),
-            duration: randomDuration(),
-            ease: "power2.inOut",
-        })
-        .to(`#peak${i}`, {
-            y: 0,
-            duration: randomDuration(),
-            ease: "power2.inOut",
-        });
-}
-
 const contactTimeline = gsap
-    .timeline({ scrollTrigger: ".contactHeading" })
+    .timeline({
+        scrollTrigger: ".contactHeading",
+        defaults: { duration: 1, ease: "linear" },
+    })
     .to(".contactHeading", {
-        duration: 1,
         x: 0,
         ease: "back",
         opacity: 1,
     })
     .to(".contactSubHeading", {
-        duration: 1,
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        opacity: 1,
     })
     .to(
         ".social-media-circle",
         {
             rotate: "360",
             repeat: -1,
-            ease: "linear",
             duration: 10,
         },
         "<"
@@ -165,8 +137,8 @@ const contactTimeline = gsap
     .to(
         ".contactForm",
         {
-            duration: 1,
             clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+            opacity: 1,
         },
         "<"
     )
@@ -175,20 +147,12 @@ const contactTimeline = gsap
         {
             rotate: "-360",
             repeat: -1,
-            ease: "linear",
             duration: 10,
         },
         "<"
     );
 
-const contactForm = document.querySelector(".contactForm");
-
-contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-});
-
 const socialCircle = document.querySelector(".social-media-circle");
-
 socialCircle.addEventListener("mouseenter", () => {
     contactTimeline.pause();
 });
@@ -196,16 +160,7 @@ socialCircle.addEventListener("mouseleave", () => {
     contactTimeline.play();
 });
 
-for (let i = 1; i < 6; i++) {
-    gsap.timeline({ repeat: -1, yoyo: true })
-        .to(`#step${i}`, {
-            y: randomY(),
-            duration: randomDuration(),
-            ease: "power2.inOut",
-        })
-        .to(`#step${i}`, {
-            y: 0,
-            duration: randomDuration(),
-            ease: "power2.inOut",
-        });
-}
+const contactForm = document.querySelector(".contactForm");
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+});
