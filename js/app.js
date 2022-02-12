@@ -79,12 +79,12 @@ const randomDuration = () => {
 
 for (let i = 1; i < 6; i++) {
     gsap.timeline({ repeat: -1, yoyo: true })
-        .to(`#path${i}`, {
+        .to(`#wave${i}`, {
             y: randomY(),
             duration: randomDuration(),
             ease: "power2.inOut",
         })
-        .to(`#path${i}`, {
+        .to(`#wave${i}`, {
             y: 0,
             duration: randomDuration(),
             ease: "power2.inOut",
@@ -100,17 +100,102 @@ const heroInit = () => {
     });
 };
 
-gsap.to(".portfolioHeading", {
-    duration: 1,
-    x: 0,
-    ease: "back",
-    opacity: 1,
-    scrollTrigger: ".portfolioHeading",
-});
-gsap.to(".portfolioItems", {
-    duration: 1.5,
-    opacity: 1,
-    scrollTrigger: ".portfolioItems",
-});
+gsap.timeline({ scrollTrigger: ".portfolioHeading" })
+    .to(".portfolioHeading", {
+        duration: 1,
+        x: 0,
+        ease: "back",
+        opacity: 1,
+    })
+    .to(
+        ".portfolioItems",
+        {
+            duration: 1.5,
+            opacity: 1,
+        },
+        "<0.5"
+    )
+    .to(
+        ".peak-divider",
+        {
+            y: 0,
+            duration: 1,
+        },
+        "<"
+    );
 
 window.addEventListener("load", heroInit);
+
+for (let i = 1; i < 6; i++) {
+    gsap.timeline({ repeat: -1, yoyo: true })
+        .to(`#peak${i}`, {
+            y: randomY(),
+            duration: randomDuration(),
+            ease: "power2.inOut",
+        })
+        .to(`#peak${i}`, {
+            y: 0,
+            duration: randomDuration(),
+            ease: "power2.inOut",
+        });
+}
+
+const contactTimeline = gsap
+    .timeline({ scrollTrigger: ".contactHeading" })
+    .to(".contactHeading", {
+        duration: 1,
+        x: 0,
+        ease: "back",
+        opacity: 1,
+    })
+    .to(".contactSubHeading", {
+        duration: 1,
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    })
+    .to(
+        ".social-media-circle",
+        {
+            rotate: "360",
+            repeat: -1,
+            ease: "linear",
+            duration: 10,
+        },
+        "<"
+    )
+    .to(
+        ".contactForm",
+        {
+            duration: 1,
+            clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+        },
+        "<"
+    );
+
+const contactForm = document.querySelector(".contactForm");
+
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+});
+
+const socialCircle = document.querySelector(".social-media-circle");
+
+socialCircle.addEventListener("mouseenter", () => {
+    contactTimeline.pause();
+});
+socialCircle.addEventListener("mouseleave", () => {
+    contactTimeline.play();
+});
+
+for (let i = 1; i < 6; i++) {
+    gsap.timeline({ repeat: -1, yoyo: true })
+        .to(`#step${i}`, {
+            y: randomY(),
+            duration: randomDuration(),
+            ease: "power2.inOut",
+        })
+        .to(`#step${i}`, {
+            y: 0,
+            duration: randomDuration(),
+            ease: "power2.inOut",
+        });
+}

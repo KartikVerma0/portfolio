@@ -78,7 +78,7 @@ body {
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
 }
 
 .navigation-bar:hover {
@@ -219,8 +219,10 @@ body {
 
 .section2 {
     width: 100%;
-    min-height: 100vh;
+    min-height: 140vh;
     background-color: var(--clr-neutral-200);
+    position: relative;
+    overflow-y: hidden;
 }
 
 .portfolioHeading {
@@ -267,6 +269,8 @@ body {
     overflow: hidden;
     padding: 2rem;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
 }
 
 .op-mil-inv > img {
@@ -359,4 +363,192 @@ body {
 
 .portfolioItems {
     opacity: 0;
+}
+
+.section3 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--clr-neutral-100);
+}
+
+.peak-divider {
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    /* z-index: -1; */
+}
+
+.contactHeading {
+    width: fit-content;
+    display: inline-block;
+    font-family: "Rozha One", serif;
+    font-size: clamp(3.7rem, 6.5vw, 8rem);
+    color: var(--clr-neutral-500);
+    line-height: 1;
+    transform: translateX(-120%);
+    opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .contactHeading {
+        text-align: center;
+    }
+}
+
+.contactSubHeading {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.contactSubHeading > h4 {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--clr-neutral-400);
+}
+
+.contactSubHeading > p {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.contactSubHeading > p a {
+    text-decoration: none;
+    color: var(--clr-neutral-400);
+}
+
+.social-media-circle {
+    width: 20rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.social-media-circle img {
+    width: 3rem;
+    aspect-ratio: 1;
+}
+
+.social-media-circle a:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 9.5rem;
+}
+
+.social-media-circle a:nth-child(2) {
+    position: absolute;
+    top: 11rem;
+    left: 1.5rem;
+}
+
+.social-media-circle a:nth-child(3) {
+    position: absolute;
+    top: 11rem;
+    right: 1.5rem;
+}
+
+.contactForm {
+    background-color: rgba(255, 209, 245, 0.3);
+    padding: 1rem;
+    border-radius: 2rem;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    margin-inline: 2rem;
+}
+
+.contactForm label {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    color: var(--clr-neutral-400);
+    font-size: 1.5rem;
+    display: block;
+}
+
+.contactForm input,
+.contactForm textarea {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    color: var(--clr-neutral-300);
+    font-size: 1rem;
+    display: block;
+    background-color: #ffd6f6;
+    border: none;
+    width: 100%;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.contactForm input {
+    height: 3rem;
+}
+
+::placeholder {
+    color: rgba(231, 148, 213, 0.5);
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: rgba(231, 148, 213, 0.5);
+    opacity: 1;
+}
+::-webkit-input-placeholder {
+    color: rgba(231, 148, 213, 0.5);
+    opacity: 1;
+}
+
+.contactForm button {
+    background-color: #ff59db;
+    border: none;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    font-family: "Lora", serif;
+    font-weight: 700;
+    color: var(--clr-neutral-400);
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    margin-left: auto;
+    display: block;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background-color: white;
+}
+
+footer > svg {
+    height: fit-content;
+}
+footer > p {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    left: 40%;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    footer > p {
+        left: 35%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer > p {
+        left: 30%;
+    }
+}
+
+.step-divider {
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    /* transform: translateY(100%); */
+    /* z-index: -1; */
 }
