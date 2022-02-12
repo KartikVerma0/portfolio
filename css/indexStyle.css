@@ -219,7 +219,8 @@ body {
 
 .section2 {
     width: 100%;
-    min-height: 140vh;
+    /* min-height: 140vh; */
+    height: fit-content;
     background-color: var(--clr-neutral-200);
     position: relative;
     overflow-y: hidden;
@@ -367,7 +368,7 @@ body {
 
 .section3 {
     width: 100%;
-    min-height: 100vh;
+    height: fit-content;
     background-color: var(--clr-neutral-100);
 }
 
