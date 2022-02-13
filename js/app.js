@@ -182,7 +182,7 @@ for (let i = 0; i < 2; i++) {
 
 mobNavBarToggleBtn[0].addEventListener("click", () => {
     gsap.to(".navigation-bar-mobile-links li", {
-        yPercent: 700,
+        yPercent: 1000,
         duration1: 1,
         stagger: 0.2,
     });
