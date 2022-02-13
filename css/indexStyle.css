@@ -183,7 +183,7 @@ body {
         align-items: center;
     }
     .navigation-bar-mobile-links li {
-        transform: translateY(-700%);
+        transform: translateY(-1000%);
     }
     .navigation-bar-mobile-links ul a {
         text-decoration: none;
@@ -501,7 +501,6 @@ body {
     aspect-ratio: 1;
     border-radius: 50%;
     position: relative;
-    margin-bottom: 5rem;
 }
 
 .social-media-circle img {
@@ -627,4 +626,8 @@ footer > p {
     position: absolute;
     bottom: 0;
     pointer-events: none;
+}
+
+.pb-5rem {
+    padding-bottom: 5rem;
 }
