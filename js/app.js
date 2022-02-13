@@ -164,3 +164,61 @@ const contactForm = document.querySelector(".contactForm");
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 });
+
+const mobNavBarToggleBtn = document.querySelectorAll(".nav-bar-toggle-btn svg");
+for (let i = 0; i < 2; i++) {
+    mobNavBarToggleBtn[i].addEventListener("click", () => {
+        document
+            .querySelector(`.nav-bar-toggle-btn svg:nth-child(${i + 1})`)
+            .classList.toggle("hidden");
+        document
+            .querySelector(`.nav-bar-toggle-btn svg:nth-child(${2 - i})`)
+            .classList.toggle("hidden");
+        document
+            .querySelector(".navigation-bar-mobile-links")
+            .classList.toggle("active");
+    });
+}
+
+mobNavBarToggleBtn[0].addEventListener("click", () => {
+    gsap.to(".navigation-bar-mobile-links li", {
+        yPercent: 700,
+        duration1: 1,
+        stagger: 0.2,
+    });
+    gsap.to(mobNavBarToggleBtn[1], {
+        right: 57,
+        bottom: 57,
+    });
+});
+
+mobNavBarToggleBtn[1].addEventListener("click", () => {
+    gsap.to(".navigation-bar-mobile-links li", {
+        yPercent: 0,
+        duration1: 1,
+    });
+});
+
+const mobNavLinks = document.querySelectorAll(
+    ".navigation-bar-mobile-links li"
+);
+
+for (let link of mobNavLinks) {
+    link.addEventListener("mouseenter", () => {
+        gsap.to(link, {
+            keyframes: {
+                "33%": {
+                    scale: 1.2,
+                    rotate: "-10",
+                },
+                "66%": {
+                    rotate: "10",
+                },
+                "100%": {
+                    rotate: "0",
+                    scale: 1,
+                },
+            },
+        });
+    });
+}
