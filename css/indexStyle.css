@@ -181,6 +181,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
     .navigation-bar-mobile-links li {
         transform: translateY(-1000%);
@@ -546,35 +548,20 @@ body {
 
 .contactForm input,
 .contactForm textarea {
-    font-family: "Lora", serif;
+    font-family: "poppins", sans-serif;
     font-weight: 400;
     color: var(--clr-neutral-300);
-    font-size: 1rem;
     display: block;
     background-color: #ffd6f6;
     border: none;
     width: 100%;
     border-radius: 1rem;
     padding-inline: 1rem;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: 1.25rem;
 }
 
 .contactForm input {
     height: 3rem;
-}
-
-::placeholder {
-    color: rgba(231, 148, 213, 0.5);
-    opacity: 1;
-}
-
-::-moz-placeholder {
-    color: rgba(231, 148, 213, 0.5);
-    opacity: 1;
-}
-::-webkit-input-placeholder {
-    color: rgba(231, 148, 213, 0.5);
-    opacity: 1;
 }
 
 .contactForm button {
