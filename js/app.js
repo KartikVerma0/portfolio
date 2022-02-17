@@ -161,8 +161,17 @@ socialCircle.addEventListener("mouseleave", () => {
 });
 
 const contactForm = document.querySelector(".contactForm");
-contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+    })
+        .then((response) => response.json())
+        .then((html) => {
+            // you can put any JS code here
+            alert("Your Message has been passed!");
+        });
 });
 
 const mobNavBarToggleBtn = document.querySelectorAll(".nav-bar-toggle-btn svg");

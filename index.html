@@ -227,12 +227,16 @@
                         </div>
                     </div>
                     <div class="col-md-6 center-on-small-screen">
-                        <form action="" class="contactForm">
+                        <form
+                            action="https://sheetdb.io/api/v1/zx5puiru425d1"
+                            class="contactForm"
+                            method="POST"
+                        >
                             <div>
                                 <label for="nameField">NAME:</label>
                                 <input
                                     type="text"
-                                    name="name"
+                                    name="data[name]"
                                     id="nameField"
                                     required
                                 />
@@ -241,7 +245,7 @@
                                 <label for="emailField">EMAIL:</label>
                                 <input
                                     type="email"
-                                    name="email"
+                                    name="data[email]"
                                     id="emailField"
                                     required
                                 />
@@ -250,7 +254,7 @@
                                 <label for="nameField">MESSAGE:</label>
                                 <textarea
                                     type="text"
-                                    name="name"
+                                    name="data[message]"
                                     id="nameField"
                                     required
                                     rows="5"
