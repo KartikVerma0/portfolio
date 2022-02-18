@@ -260,7 +260,34 @@
                                     rows="5"
                                 ></textarea>
                             </div>
-                            <button class="mt-2">SUBMIT</button>
+                            <button
+                                class="mt-4 button-secondary"
+                                id="contactFormButton"
+                            >
+                                SUBMIT
+                                <div
+                                    class="spinner-border text-dark d-none"
+                                    role="status"
+                                >
+                                    <span class="visually-hidden"
+                                        >Loading...</span
+                                    >
+                                </div>
+                            </button>
+                            <div
+                                class="alert alert-success mt-2 d-none"
+                                role="alert"
+                                id="successContactFormAlert"
+                            >
+                                Your Message has been Delivered.
+                            </div>
+                            <div
+                                class="alert alert-danger mt-2 d-none"
+                                role="alert"
+                                id="failureContactFormAlert"
+                            >
+                                Your Message failed to Delivered.
+                            </div>
                         </form>
                     </div>
                 </div>

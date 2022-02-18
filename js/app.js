@@ -161,8 +161,12 @@ socialCircle.addEventListener("mouseleave", () => {
 });
 
 const contactForm = document.querySelector(".contactForm");
+const successAlert = document.querySelector("#successContactFormAlert");
+const failureAlert = document.querySelector("#failureContactFormAlert");
+const spinnerBorder = document.querySelector(".spinner-border");
 contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    spinnerBorder.classList.toggle("d-none");
     fetch(contactForm.action, {
         method: "POST",
         body: new FormData(contactForm),
@@ -170,7 +174,12 @@ contactForm.addEventListener("submit", (e) => {
         .then((response) => response.json())
         .then((html) => {
             // you can put any JS code here
-            alert("Your Message has been passed!");
+            successAlert.classList.toggle("d-none");
+            spinnerBorder.classList.toggle("d-none");
+        })
+        .catch((e) => {
+            failureAlert.classList.toggle("d-none");
+            spinnerBorder.classList.toggle("d-none");
         });
 });
 
