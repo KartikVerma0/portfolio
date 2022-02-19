@@ -79,7 +79,7 @@ for (let divider of dividers) {
 }
 
 const heroInit = () => {
-    gsap.to(document.querySelector(".hero__heading"), {
+    gsap.to(document.querySelector("#hero__heading"), {
         opacity: 1,
         ease: "power1.Out",
         duration: 4,
@@ -89,8 +89,8 @@ const heroInit = () => {
 
 window.addEventListener("load", heroInit);
 
-gsap.timeline({ scrollTrigger: ".portfolioHeading", defaults: { duration: 1 } })
-    .to(".portfolioHeading", {
+gsap.timeline({ scrollTrigger: "#portfolioHeading", defaults: { duration: 1 } })
+    .to("#portfolioHeading", {
         x: 0,
         ease: "back",
         opacity: 1,
@@ -113,15 +113,15 @@ gsap.timeline({ scrollTrigger: ".portfolioHeading", defaults: { duration: 1 } })
 
 const contactTimeline = gsap
     .timeline({
-        scrollTrigger: ".contact-section__primary-heading",
+        scrollTrigger: "#contactHeading",
         defaults: { duration: 1, ease: "linear" },
     })
-    .to(".contact-section__primary-heading", {
+    .to("#contactHeading", {
         x: 0,
         ease: "back",
         opacity: 1,
     })
-    .to(".contact-section__text", {
+    .to("#contact-section__text", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         opacity: 1,
     })
@@ -135,7 +135,7 @@ const contactTimeline = gsap
         "<"
     )
     .to(
-        ".contactForm",
+        "#contactForm",
         {
             clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
             opacity: 1,

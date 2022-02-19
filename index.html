@@ -26,7 +26,9 @@
     <body>
         <section class="hero">
             <div class="w-100 h-100 u-blurredbg d-flex align-items-center">
-                <h1 class="hero__heading w-100 text-center">Welcome</h1>
+                <h1 class="hero__heading w-100 text-center" id="hero__heading">
+                    Welcome
+                </h1>
             </div>
         </section>
         <nav class="navigation-bar">
@@ -104,18 +106,18 @@
             <section class="my-description container" id="my-description">
                 <div class="row">
                     <section class="col-md-6 u-center-on-small-screen">
-                        <h2 class="introHeading fadeInFromLeft">
+                        <h2 class="introHeading secondary-heading">
                             Hi, I am Kartik.
                         </h2>
                         <div class="col-md-8">
-                            <p class="fadeInFromLeft">
+                            <p>
                                 I am a Computer Science Student, learning Web
                                 Development and experimenting with it. I am a
                                 NCC Cadet too and my Country is my passion.
                             </p>
                         </div>
                         <a href="mailto:katik2129.be21@chitkara.edu.in"
-                            ><button class="fadeInFromLeft button-primary">
+                            ><button class="button-primary">
                                 Get in Touch
                             </button></a
                         >
@@ -124,7 +126,7 @@
                         <img
                             src="images/kartik.png"
                             alt="Kartik"
-                            class="fadeInFromRight kartik-image"
+                            class="kartik-image"
                         />
                     </div>
                 </div>
@@ -164,7 +166,12 @@
             id="portfolio"
         >
             <div class="container u-center-on-small-screen pt-3">
-                <h2 class="portfolioHeading fadeInFromLeft">Portfolio</h2>
+                <h2
+                    class="secondary-heading secondary-heading--portfolio"
+                    id="portfolioHeading"
+                >
+                    Portfolio
+                </h2>
             </div>
             <div class="container pb-5 u-center-on-small-screen portfolioItems">
                 <h3 class="portfolioItems__SubHeading my-3">
@@ -216,7 +223,10 @@
         </section>
         <section class="contact-section u-center-on-small-screen" id="contact">
             <div class="container u-center-on-small-screen pt-3">
-                <h2 class="contact-section__primary-heading fadeInFromLeft">
+                <h2
+                    class="contact-section__primary-heading"
+                    id="contactHeading"
+                >
                     Contact
                 </h2>
             </div>
@@ -224,6 +234,7 @@
                 <div class="row u-pb-5rem">
                     <div
                         class="col-md-6 u-center-on-small-screen contact-section__text"
+                        id="contact-section__text"
                     >
                         <div>
                             <h4 class="contact-section__secondary-heading">
@@ -273,6 +284,7 @@
                         <form
                             action="https://sheetdb.io/api/v1/zx5puiru425d1"
                             class="contactForm"
+                            id="contactForm"
                             method="POST"
                         >
                             <div>

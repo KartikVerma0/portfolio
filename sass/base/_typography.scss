@@ -4,29 +4,26 @@
     src: url("../fonts/Ruthligos.ttf");
 }
 
-.my-description {
-    h2 {
-        font-size: clamp(4.7rem, 7.9vw, 7.2rem);
-        font-family: $font-primary;
-        color: $color-white;
-        line-height: 0.8;
-    }
+.secondary-heading {
+    font-size: clamp(4.7rem, 7.9vw, 7.2rem);
+    font-family: $font-primary;
+    color: $color-white;
+    line-height: 0.8;
 
+    &--portfolio {
+        font-size: clamp(3.7rem, 6.5vw, 8rem);
+        color: $color-primary-400;
+        line-height: 1;
+    }
+}
+
+.my-description {
     p {
         color: rgba($color-white, 0.7);
         font-size: clamp(1.35rem, 1.6vw, 5.4rem);
 
         font-weight: 300;
     }
-}
-
-.portfolioHeading {
-    width: fit-content;
-    display: inline-block;
-    font-family: $font-primary;
-    font-size: clamp(3.7rem, 6.5vw, 8rem);
-    color: $color-primary-400;
-    line-height: 1;
 }
 
 @media screen and (max-width: 768px) {
