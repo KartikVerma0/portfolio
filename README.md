@@ -13,4 +13,5 @@ portfolio --> index : index.html
 
 css:indexStyle.css
 js:app.js
+fonts:Ruthligos.ttf
 ```
