@@ -4,14 +4,10 @@ This Repository contains files of Portfolio Website.
 
 File Structure:
 ```mermaid
-classDiagram
-portfolio --> css
-portfolio --> fonts
-portfolio --> images
-portfolio --> js
-portfolio --> index : index.html
-
-css:indexStyle.css
-js:app.js
-fonts:Ruthligos.ttf
+flowchart TB
+portfolio ---> css-.->indexStyle.css
+portfolio ---> fonts-.->Ruthligos.ttf
+portfolio ---> images-..->image[Lots of images]
+portfolio ---> js-.->app.js
+portfolio ---> indexFile["index.html"]
 ```
