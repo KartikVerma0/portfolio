@@ -25,20 +25,36 @@
     </head>
     <body>
         <section class="hero">
-            <div class="w-100 h-100 blurredbg d-flex align-items-center">
-                <h1 class="hero-heading w-100 text-center">Welcome</h1>
+            <div class="w-100 h-100 u-blurredbg d-flex align-items-center">
+                <h1 class="hero__heading w-100 text-center">Welcome</h1>
             </div>
         </section>
         <nav class="navigation-bar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#my-description">ABOUT</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+            <ul class="navigation-bar__list">
+                <li>
+                    <a href="index.html" class="navigation-bar__list__link"
+                        >HOME</a
+                    >
+                </li>
+                <li>
+                    <a href="#my-description" class="navigation-bar__list__link"
+                        >ABOUT</a
+                    >
+                </li>
+                <li>
+                    <a href="#portfolio" class="navigation-bar__list__link"
+                        >PORTFOLIO</a
+                    >
+                </li>
+                <li>
+                    <a href="#contact" class="navigation-bar__list__link"
+                        >CONTACT</a
+                    >
+                </li>
             </ul>
         </nav>
         <nav class="navigation-bar-mobile">
-            <div class="nav-bar-toggle-btn">
+            <div class="navigation-bar-mobile__toggle-btn">
                 <svg
                     width="36"
                     height="25"
@@ -75,7 +91,7 @@
                     />
                 </svg>
             </div>
-            <div class="navigation-bar-mobile-links active">
+            <div class="navigation-bar-mobile__links active">
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#my-description">ABOUT</a></li>
@@ -84,10 +100,10 @@
                 </ul>
             </div>
         </nav>
-        <section class="section1">
+        <section class="description-section">
             <section class="my-description container" id="my-description">
                 <div class="row">
-                    <section class="col-md-6 center-on-small-screen">
+                    <section class="col-md-6 u-center-on-small-screen">
                         <h2 class="introHeading fadeInFromLeft">
                             Hi, I am Kartik.
                         </h2>
@@ -99,7 +115,7 @@
                             </p>
                         </div>
                         <a href="mailto:katik2129.be21@chitkara.edu.in"
-                            ><button class="fadeInFromLeft">
+                            ><button class="fadeInFromLeft button-primary">
                                 Get in Touch
                             </button></a
                         >
@@ -108,7 +124,7 @@
                         <img
                             src="images/kartik.png"
                             alt="Kartik"
-                            class="fadeInFromRight"
+                            class="fadeInFromRight kartik-image"
                         />
                     </div>
                 </div>
@@ -143,18 +159,22 @@
                 </svg>
             </div>
         </section>
-        <section class="section2 center-on-small-screen" id="portfolio">
-            <div class="container center-on-small-screen pt-3">
+        <section
+            class="portfolio-section u-center-on-small-screen"
+            id="portfolio"
+        >
+            <div class="container u-center-on-small-screen pt-3">
                 <h2 class="portfolioHeading fadeInFromLeft">Portfolio</h2>
             </div>
-            <div class="container pb-5 center-on-small-screen portfolioItems">
-                <h3 class="portfolioSubHeading my-3">
+            <div class="container pb-5 u-center-on-small-screen portfolioItems">
+                <h3 class="portfolioItems__SubHeading my-3">
                     <a
+                        class="portfolioItems__SubHeading--color portfolioItems__SubHeading--text-decoration-none"
                         href="https://kartikverma0.github.io/operation-military-inventory/"
                         >Operation Military Inventory</a
                     >
                 </h3>
-                <div class="op-mil-inv mb-5">
+                <div class="portfolioItems__grid mb-5">
                     <img src="images/grid-p1.jpg" alt="" /><img
                         src="images/grid-p2.jpg"
                         alt=""
@@ -194,47 +214,75 @@
                 </svg>
             </div>
         </section>
-        <section class="section3 center-on-small-screen" id="contact">
-            <div class="container center-on-small-screen pt-3">
-                <h2 class="contactHeading fadeInFromLeft">Contact</h2>
+        <section class="contact-section u-center-on-small-screen" id="contact">
+            <div class="container u-center-on-small-screen pt-3">
+                <h2 class="contact-section__primary-heading fadeInFromLeft">
+                    Contact
+                </h2>
             </div>
             <div class="container mt-5">
-                <div class="row pb-5rem">
+                <div class="row u-pb-5rem">
                     <div
-                        class="col-md-6 contactSubHeading center-on-small-screen"
+                        class="col-md-6 u-center-on-small-screen contact-section__text"
                     >
-                        <h4>EMAIL:</h4>
-                        <p>
-                            <a href="mailto:Katik2129.be21@chitkara.edu.in"
-                                >Katik2129.be21@chitkara.edu.in</a
-                            >
-                        </p>
-                        <h4 class="mt-5 mb-3">SOCIAL MEDIA:</h4>
-                        <div class="social-media-circle">
-                            <a href="https://github.com/KartikVerma0"
-                                ><img src="images/github_2048_black.png" alt=""
-                            /></a>
-                            <a href="https://www.linkedin.com/in/kartikvr/"
-                                ><img
-                                    src="images/linkedin-icon-logo-png-transparent.png"
-                                    alt=""
-                            /></a>
-                            <a href="https://twitter.com/KartikVr_"
-                                ><img
-                                    src="images/cricle-twitter-emblem-png-clipart-8.png"
-                                    alt=""
-                            /></a>
+                        <div>
+                            <h4 class="contact-section__secondary-heading">
+                                EMAIL:
+                            </h4>
+                            <p class="contact-section__paragraph">
+                                <a
+                                    href="mailto:Katik2129.be21@chitkara.edu.in"
+                                    class="contact-section__link"
+                                    >Katik2129.be21@chitkara.edu.in</a
+                                >
+                            </p>
+                        </div>
+                        <div class="social-media-section">
+                            <h4 class="mt-5 mb-3 social-media-section__heading">
+                                SOCIAL MEDIA:
+                            </h4>
+                            <div class="social-media-section__circle">
+                                <a
+                                    href="https://github.com/KartikVerma0"
+                                    class="social-media-section__circle__link"
+                                    ><img
+                                        src="images/github_2048_black.png"
+                                        alt=""
+                                        class="social-media-section__circle__link__image"
+                                /></a>
+                                <a
+                                    href="https://www.linkedin.com/in/kartikvr/"
+                                    class="social-media-section__circle__link"
+                                    ><img
+                                        src="images/linkedin-icon-logo-png-transparent.png"
+                                        alt=""
+                                        class="social-media-section__circle__link__image"
+                                /></a>
+                                <a
+                                    href="https://twitter.com/KartikVr_"
+                                    class="social-media-section__circle__link"
+                                    ><img
+                                        src="images/cricle-twitter-emblem-png-clipart-8.png"
+                                        alt=""
+                                        class="social-media-section__circle__link__image"
+                                /></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 center-on-small-screen">
+                    <div class="col-md-6 u-center-on-small-screen">
                         <form
                             action="https://sheetdb.io/api/v1/zx5puiru425d1"
                             class="contactForm"
                             method="POST"
                         >
                             <div>
-                                <label for="nameField">NAME:</label>
+                                <label
+                                    for="nameField"
+                                    class="contactForm__label"
+                                    >NAME:</label
+                                >
                                 <input
+                                    class="contactForm__input contactForm__input--height-medium"
                                     type="text"
                                     name="data[name]"
                                     id="nameField"
@@ -242,8 +290,13 @@
                                 />
                             </div>
                             <div>
-                                <label for="emailField">EMAIL:</label>
+                                <label
+                                    for="emailField"
+                                    class="contactForm__label"
+                                    >EMAIL:</label
+                                >
                                 <input
+                                    class="contactForm__input contactForm__input--height-medium"
                                     type="email"
                                     name="data[email]"
                                     id="emailField"
@@ -251,8 +304,13 @@
                                 />
                             </div>
                             <div>
-                                <label for="nameField">MESSAGE:</label>
+                                <label
+                                    for="nameField"
+                                    class="contactForm__label"
+                                    >MESSAGE:</label
+                                >
                                 <textarea
+                                    class="contactForm__input"
                                     type="text"
                                     name="data[message]"
                                     id="nameField"
