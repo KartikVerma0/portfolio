@@ -1,0 +1,40 @@
+.social-media-section {
+    &__heading {
+        font-family: $font-secondary;
+        font-weight: 700;
+        font-size: 2rem;
+        color: $color-primary-300;
+    }
+
+    &__circle {
+        width: 20rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        position: relative;
+
+        &__link {
+            &:nth-child(1) {
+                position: absolute;
+                top: 0;
+                left: 9.5rem;
+            }
+
+            &:nth-child(2) {
+                position: absolute;
+                top: 11rem;
+                left: 1.5rem;
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                top: 11rem;
+                right: 1.5rem;
+            }
+
+            &__image {
+                width: 3rem;
+                aspect-ratio: 1;
+            }
+        }
+    }
+}
