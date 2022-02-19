@@ -4,7 +4,7 @@ const tl1 = gsap
     .timeline({
         scrollTrigger: {
             trigger: ".introHeading",
-            toggleActions: "play pause pause pause",
+            toggleActions: "play complete pause pause",
             // markers: true,
         },
         defaults: { duration: 1, x: 0, ease: "easeIn", opacity: 1 },
@@ -32,7 +32,7 @@ for (let i = 1; i < 3; i++) {
 gsap.timeline({
     scrollTrigger: {
         trigger: ".my-description img",
-        toggleActions: "play pause pause pause",
+        toggleActions: "play complete pause pause",
         // markers: true,
     },
 })
@@ -79,7 +79,7 @@ for (let divider of dividers) {
 }
 
 const heroInit = () => {
-    gsap.to(document.querySelector(".hero-heading"), {
+    gsap.to(document.querySelector(".hero__heading"), {
         opacity: 1,
         ease: "power1.Out",
         duration: 4,
@@ -113,20 +113,20 @@ gsap.timeline({ scrollTrigger: ".portfolioHeading", defaults: { duration: 1 } })
 
 const contactTimeline = gsap
     .timeline({
-        scrollTrigger: ".contactHeading",
+        scrollTrigger: ".contact-section__primary-heading",
         defaults: { duration: 1, ease: "linear" },
     })
-    .to(".contactHeading", {
+    .to(".contact-section__primary-heading", {
         x: 0,
         ease: "back",
         opacity: 1,
     })
-    .to(".contactSubHeading", {
+    .to(".contact-section__text", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         opacity: 1,
     })
     .to(
-        ".social-media-circle",
+        ".social-media-section__circle",
         {
             rotate: "360",
             repeat: -1,
@@ -143,7 +143,7 @@ const contactTimeline = gsap
         "<"
     )
     .to(
-        ".social-media-circle a",
+        ".social-media-section__circle a",
         {
             rotate: "-360",
             repeat: -1,
@@ -152,7 +152,7 @@ const contactTimeline = gsap
         "<"
     );
 
-const socialCircle = document.querySelector(".social-media-circle");
+const socialCircle = document.querySelector(".social-media-section__circle");
 socialCircle.addEventListener("mouseenter", () => {
     contactTimeline.pause();
 });
@@ -183,23 +183,29 @@ contactForm.addEventListener("submit", (e) => {
         });
 });
 
-const mobNavBarToggleBtn = document.querySelectorAll(".nav-bar-toggle-btn svg");
+const mobNavBarToggleBtn = document.querySelectorAll(
+    ".navigation-bar-mobile__toggle-btn svg"
+);
 for (let i = 0; i < 2; i++) {
     mobNavBarToggleBtn[i].addEventListener("click", () => {
         document
-            .querySelector(`.nav-bar-toggle-btn svg:nth-child(${i + 1})`)
+            .querySelector(
+                `.navigation-bar-mobile__toggle-btn svg:nth-child(${i + 1})`
+            )
             .classList.toggle("hidden");
         document
-            .querySelector(`.nav-bar-toggle-btn svg:nth-child(${2 - i})`)
+            .querySelector(
+                `.navigation-bar-mobile__toggle-btn svg:nth-child(${2 - i})`
+            )
             .classList.toggle("hidden");
         document
-            .querySelector(".navigation-bar-mobile-links")
+            .querySelector(".navigation-bar-mobile__links")
             .classList.toggle("active");
     });
 }
 
 mobNavBarToggleBtn[0].addEventListener("click", () => {
-    gsap.to(".navigation-bar-mobile-links li", {
+    gsap.to(".navigation-bar-mobile__links li", {
         yPercent: 1000,
         duration1: 1,
         stagger: 0.2,
@@ -211,14 +217,14 @@ mobNavBarToggleBtn[0].addEventListener("click", () => {
 });
 
 mobNavBarToggleBtn[1].addEventListener("click", () => {
-    gsap.to(".navigation-bar-mobile-links li", {
+    gsap.to(".navigation-bar-mobile__links li", {
         yPercent: 0,
         duration1: 1,
     });
 });
 
 const mobNavLinks = document.querySelectorAll(
-    ".navigation-bar-mobile-links li"
+    ".navigation-bar-mobile__links li"
 );
 
 for (let link of mobNavLinks) {
