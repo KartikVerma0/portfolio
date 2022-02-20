@@ -160,9 +160,46 @@ socialCircle.addEventListener("mouseleave", () => {
     contactTimeline.play();
 });
 
+function createSuccessAlert() {
+    let successAlertDiv = document.createElement("div");
+    let closeButton = document.createElement("button");
+    successAlertDiv.classList.add("alert", "alert-success", "mt-2");
+    successAlertDiv.setAttribute("role", "alert");
+    successAlertDiv.style.fontSize = "clamp(0.85rem,1.75vw,1.1rem)";
+    successAlertDiv.textContent = "Your Message has been Delivered.";
+    closeButton.setAttribute("type", "button");
+    closeButton.setAttribute("aria-label", "Close");
+    closeButton.classList.add("btn-close");
+    successAlertDiv.append(closeButton);
+    closeButton.style.position = "absolute";
+    closeButton.style.right = "10px";
+    contactForm.appendChild(successAlertDiv);
+    closeButton.addEventListener("click", () => {
+        successAlertDiv.style.display = "none";
+    });
+}
+
+function createFailureAlert() {
+    let failureAlertDiv = document.createElement("div");
+    let closeButton = document.createElement("button");
+    failureAlertDiv.classList.add("alert", "alert-danger", "mt-2");
+    failureAlertDiv.setAttribute("role", "alert");
+    failureAlertDiv.style.fontSize = "clamp(0.85rem,1.75vw,1.1rem)";
+    failureAlertDiv.textContent = "Your Message failed to Delivered.";
+    closeButton.setAttribute("type", "button");
+    closeButton.setAttribute("aria-label", "Close");
+    closeButton.classList.add("btn-close");
+    failureAlertDiv.append(closeButton);
+    closeButton.style.position = "absolute";
+    closeButton.style.right = "10px";
+    contactForm.appendChild(failureAlertDiv);
+    closeButton.addEventListener("click", () => {
+        failureAlertDiv.style.display = "none";
+    });
+}
+
 const contactForm = document.querySelector(".contactForm");
-const successAlert = document.querySelector("#successContactFormAlert");
-const failureAlert = document.querySelector("#failureContactFormAlert");
+
 const spinnerBorder = document.querySelector(".spinner-border");
 contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -173,13 +210,10 @@ contactForm.addEventListener("submit", (e) => {
     })
         .then((response) => response.json())
         .then((html) => {
-            // you can put any JS code here
-            successAlert.classList.toggle("d-none");
-            spinnerBorder.classList.toggle("d-none");
+            createSuccessAlert();
         })
         .catch((e) => {
-            failureAlert.classList.toggle("d-none");
-            spinnerBorder.classList.toggle("d-none");
+            createFailureAlert();
         });
 });
 
