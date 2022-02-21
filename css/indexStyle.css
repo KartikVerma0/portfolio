@@ -87,10 +87,28 @@ body {
     line-height: 1;
 }
 
+@media screen and (max-width: 576px) {
+    .secondary-heading {
+        font-size: clamp(3rem, 13vw, 7rem);
+    }
+}
+
 .my-description p {
     color: rgba(255, 255, 255, 0.7);
     font-size: clamp(1.35rem, 1.6vw, 5.4rem);
     font-weight: 300;
+}
+
+@media screen and (max-width: 769px) {
+    .my-description p {
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .my-description p {
+        font-size: clamp(1.25rem, 1.4vw, 3rem);
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -157,6 +175,14 @@ body {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.u-mr-auto {
+    margin-right: auto;
+}
+
+.u-position-relative {
+    position: relative;
 }
 
 .button-primary {
@@ -240,19 +266,18 @@ footer p {
     position: absolute;
     bottom: 0;
     margin-bottom: 0;
-    left: 40%;
+    left: 50%;
     color: white;
-}
-
-@media screen and (max-width: 768px) {
-    footer > p {
-        left: 35%;
-    }
+    transform: translate(-50%, 0);
+    font-size: 1rem;
 }
 
 @media screen and (max-width: 576px) {
-    footer > p {
-        left: 30%;
+    footer {
+        height: 10vh;
+    }
+    footer p {
+        font-size: 0.6rem;
     }
 }
 
@@ -579,13 +604,17 @@ footer p {
             rgba(0, 0, 0, 0.8)
         ),
         url("../images/landing-banner.jpg") center/cover no-repeat;
+    background-position: 47% center;
 }
 .hero__heading {
     font-size: clamp(4rem, 15vw, 15rem);
     color: white;
     font-family: "Ruthligos", cursive;
     font-weight: 100;
-    padding-left: 5.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 576px) {
@@ -600,7 +629,7 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
-    .hero_heading {
+    .hero__heading {
         padding-left: 2rem;
     }
 }
@@ -625,12 +654,21 @@ footer p {
     margin-top: 1.2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    .my-description {
+        margin-top: 0;
+    }
     .my-description h2 {
         text-align: center;
     }
     .my-description p {
         text-align: center;
         padding-inline: 5.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .my-description p {
+        padding-inline: 3.5rem;
     }
 }
