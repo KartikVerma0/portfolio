@@ -161,6 +161,21 @@ body {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .contact-section__secondary-heading {
+        font-size: 1.75rem;
+    }
+    .contact-section__paragraph {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-section__paragraph {
+        font-size: 1.05rem;
+    }
+}
+
 .u-blurredbg {
     backdrop-filter: blur(1.5px);
 }
@@ -260,7 +275,7 @@ footer {
     background-color: white;
 }
 footer svg {
-    height: fit-content;
+    width: 100%;
 }
 footer p {
     position: absolute;
@@ -570,6 +585,54 @@ footer p {
 .social-media-section__circle__link__image {
     width: 3rem;
     aspect-ratio: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .social-media-section__circle {
+        width: 17rem;
+    }
+    .social-media-section__circle__link:nth-child(1) {
+        top: 0;
+        left: 7rem;
+    }
+    .social-media-section__circle__link:nth-child(2) {
+        top: 11rem;
+        left: 1.25rem;
+    }
+    .social-media-section__circle__link:nth-child(3) {
+        top: 11rem;
+        right: 1.25rem;
+    }
+    .social-media-section__circle__link__image {
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .social-media-section__circle {
+        width: 14rem;
+    }
+    .social-media-section__circle__link:nth-child(1) {
+        top: 0;
+        left: 5.5rem;
+    }
+    .social-media-section__circle__link:nth-child(2) {
+        top: 9rem;
+        left: 1.25rem;
+    }
+    .social-media-section__circle__link:nth-child(3) {
+        top: 9rem;
+        right: 1.25rem;
+    }
+    .social-media-section__circle__link__image {
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .social-media-section__heading {
+        font-size: 1.75rem;
+    }
 }
 
 .portfolio-section {
