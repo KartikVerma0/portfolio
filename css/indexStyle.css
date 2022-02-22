@@ -336,6 +336,12 @@ footer p {
     -webkit-text-stroke: 1px #ba229c;
 }
 
+@supports not (backdrop-filter: blur(10px)) {
+    .navigation-bar {
+        background: rgba(177, 26, 147, 0.4);
+    }
+}
+
 @media screen and (max-width: 576px) {
     .navigation-bar {
         display: none;
@@ -422,6 +428,12 @@ footer p {
         color: white;
         font-size: 3rem;
         font-weight: 600;
+    }
+}
+
+@supports not (backdrop-filter: blur(5px)) {
+    .navigation-bar-mobile__links {
+        background-color: rgba(0, 0, 0, 0.9);
     }
 }
 
