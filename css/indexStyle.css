@@ -210,8 +210,13 @@ body {
     font-weight: 400;
     font-size: 1.8rem;
     transition: all 200ms ease-out;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.4rem 1rem;
 }
-.button-primary:hover {
+.button-primary:hover,
+.button-primary:focus {
+    color: #170814;
     transform: translateY(-0.36rem);
     box-shadow: 0.36rem 0.36rem 0 #e794d5;
 }
