@@ -12,7 +12,7 @@ const tl1 = gsap
     .to(".introHeading", {})
     .to(".my-description p", {}, "<")
     .to(
-        ".my-description button",
+        "#getInTouch ",
         {
             duration: 0.8,
         },
@@ -20,10 +20,10 @@ const tl1 = gsap
     );
 
 for (let i = 1; i < 3; i++) {
-    tl1.to(".my-description button", {
+    tl1.to("#getInTouch", {
         scale: 1.2,
         duration: 0.3,
-    }).to(".my-description button", {
+    }).to("#getInTouch", {
         scale: 1,
         duration: 0.3,
     });
