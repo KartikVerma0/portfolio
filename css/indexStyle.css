@@ -213,6 +213,7 @@ body {
     text-decoration: none;
     text-align: center;
     padding: 0.4rem 1rem;
+    display: inline-block;
 }
 .button-primary:hover,
 .button-primary:focus {
