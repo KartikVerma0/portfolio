@@ -60,6 +60,17 @@
     transform: scale(0.98);
 }
 
+.contactFormLottieAnimation {
+    position: absolute;
+    top: -12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    aspect-ratio: 1;
+    height: 190px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -200,6 +211,12 @@ body {
     position: relative;
 }
 
+@media screen and (max-width: 768px) {
+    .u-gap-big-tab {
+        gap: 20rem;
+    }
+}
+
 .button-primary {
     width: 14.4rem;
     height: 3.6rem;
@@ -249,7 +266,9 @@ body {
     background-color: rgba(255, 209, 245, 0.3);
     padding: 1rem;
     border-radius: 2rem;
+    position: relative;
     margin-inline: 2rem;
+    overflow: visible;
 }
 .contactForm__label {
     font-family: "Lora", serif;
