@@ -111,6 +111,29 @@ gsap.timeline({ scrollTrigger: "#portfolioHeading", defaults: { duration: 1 } })
         "<"
     );
 
+gsap.timeline({
+    scrollTrigger: "#skillHeading",
+    defaults: { duration: 1, ease: "back" },
+})
+    .to("#skillHeading", {
+        x: 0,
+        opacity: 1,
+    })
+    .from(".skill-figure", {
+        y: 10,
+        duration: 0.8,
+        opacity: 0,
+        stagger: 0.1,
+    })
+    .from(
+        ".skill-lottie__animation",
+        {
+            y: 30,
+            opacity: 0,
+        },
+        "-=1"
+    );
+
 const contactTimeline = gsap
     .timeline({
         scrollTrigger: "#contactHeading",
