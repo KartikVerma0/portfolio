@@ -234,6 +234,7 @@ contactForm.addEventListener("submit", (e) => {
         .then((response) => response.json())
         .then((html) => {
             createSuccessAlert();
+            spinnerBorder.classList.toggle("d-none");
         })
         .catch((e) => {
             createFailureAlert();
