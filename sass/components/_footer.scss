@@ -1,0 +1,52 @@
+footer {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    background-color: $color-white;
+
+    svg {
+        width: 100%;
+    }
+    p {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0;
+        left: 50%;
+        color: $color-white;
+        transform: translate(-50%, 0);
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 970px) {
+    footer {
+        height: 25vh;
+    }
+}
+
+@media screen and (min-width: 1165px) {
+    footer {
+        height: 26vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        height: 12vh;
+
+        p {
+            font-size: 0.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer {
+        height: 6vh;
+
+        p {
+            font-size: 0.6rem;
+        }
+    }
+}

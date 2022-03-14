@@ -1,0 +1,35 @@
+.u-blurredbg {
+    backdrop-filter: blur(1.5px);
+}
+
+.u-pb-5rem {
+    padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .u-center-on-small-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.u-mr-auto {
+    margin-right: auto;
+}
+
+.u-position-relative {
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .u-gap-big-tab {
+        gap: 20rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .u-justify-content-center-tablet {
+        justify-content: center;
+    }
+}

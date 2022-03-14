@@ -1,0 +1,18 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/buttons";
+@import "components/contact-form";
+@import "components/footer";
+@import "components/my-image";
+@import "components/navigation-bar";
+@import "components/portfolioItems";
+@import "components/section-divider";
+@import "components/social-media-circle";
+
+@import "pages/home";
