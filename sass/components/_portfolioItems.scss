@@ -6,6 +6,17 @@
         font-size: clamp(1.75rem, 3vw, 6rem);
         color: $color-primary-300;
 
+        &__github {
+            a {
+                text-decoration: none;
+                color: $color-primary-200;
+                &:hover {
+                    color: #c137a6;
+                }
+            }
+            font-size: 50%;
+        }
+
         &--text-decoration-none {
             text-decoration: none;
         }
