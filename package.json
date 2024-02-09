@@ -4,11 +4,11 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "compile:sass": "node-sass sass/main.scss css/indexStyle.css -w"
+        "compile:sass": "sass sass/main.scss css/indexStyle.css -w"
     },
     "author": "",
     "license": "ISC",
-    "devDependencies": {
-        "node-sass": "^7.0.1"
+    "dependencies": {
+        "sass": "^1.70.0"
     }
 }
